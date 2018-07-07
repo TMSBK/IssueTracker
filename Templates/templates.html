@@ -1,0 +1,91 @@
+<!-- 
+
+	******************** BEJELENTŐ FORM ******************** 
+
+-->
+
+<template id="form">
+    <form action="">
+    	<div id="selectContainer">
+    		<div class="custom-select">
+		    	<select class="selectItem">        
+		            <option value="Objektum">Objektum</option>
+		            <option value="Objektum">Objektum</option>
+		            <option value="Objektum">Objektum</option>
+		            <option value="Objektum">Objektum</option>
+		            <option value="Objektum">Objektum</option>
+		            <option value="Objektum">Objektum</option>
+		            <option value="Objektum">Objektum</option>
+		    	</select>
+	    	</div>
+    		<div class="custom-select">
+		    	<select class="selectItem">       
+		            <option value="Ingatlan">Ingatlan</option>
+		    	</select>
+	    	</div>
+    		<div class="custom-select">
+		    	<select class="selectItem">        
+		            <option value="Szakterület">Szakterület</option>
+		    	</select>
+		    </div>
+    		<div class="custom-select">
+		    	<select class="selectItem">         
+		            <option value="Tipus">Bejelentés típusa</option>
+		    	</select>
+		    </div>
+    		<div class="custom-select">
+		    	<select class="selectItem">         
+		            <option value="Besorolás">Besorolás</option>
+		    	</select>
+		    </div>
+    		<div class="custom-select">
+		    	<select class="selectItem">         
+		            <option value="SLA">Szolgáltatási szint</option>
+		    	</select>
+		    </div>
+    	</div>
+    	<textarea type="text" name="issue"></textarea><br>
+		<input type="submit" value="Beküldés" id="submitButton">
+		<div id="ratings">
+            <span id="1p" class="radioInputSpan">
+              	<input name='rating' class="radioInput" type="radio" value="1" name="radioButton" onchange="ratingTracker(this)">
+            </span>
+            <span id="2p" class="radioInputSpan">
+              	<input name='rating' class="radioInput" type="radio" value="2" name="radioButton" onchange="ratingTracker(this)">
+            </span>
+            <span id="3p" class="radioInputSpan">
+              	<input name='rating' class="radioInput" type="radio" value="3" name="radioButton" onchange="ratingTracker(this)">
+            </span>
+            <span id="4p" class="radioInputSpan">
+              	<input name='rating' class="radioInput" type="radio" value="4" name="radioButton" onchange="ratingTracker(this)">
+            </span>
+            <span id="5p" class="radioInputSpan">
+              	<input name='rating' class="radioInput" type="radio" value="5" name="radioButton" onchange="ratingTracker(this)">
+            </span>
+            <p id="ratingSign">Kérem értékelje szolgáltatásunkat!</p>
+        </div>
+    </form>
+</template>
+
+<!-- 
+
+	******************** BEJELENTÉSEK ******************** 
+
+-->
+
+
+<template id="issues">
+	
+</template>
+
+
+
+<!-- 
+
+	******************** JELSZÓ MÓDOSÍTÁSI FELÜLET ******************** 
+
+-->
+
+<template id="password">
+	
+</template>
