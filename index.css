@@ -118,6 +118,12 @@ form {
 	height: 100%;
 }
 
+#selectContainerOn,
+#selectContainerOff {
+	display: none;
+	cursor: pointer;
+}
+
 #selectContainer {
 	display: flex;
 	flex-wrap: wrap;
@@ -260,6 +266,40 @@ textarea {
 }
 .select-items div:hover, .same-as-selected {
   	background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 800px) {
+
+	#selectContainerOn {
+		display: block;
+		width: 100%;
+		height: 15%;
+		background-color: blue;
+	}
+
+	#selectContainerOff {
+		display: block;
+		width: 100%;
+		height: 80px;
+		background-color: DodgerBlue;
+		border-radius: 0 0 10px 10px;
+	}
+
+	#selectContainerOff:before {
+	  content: "";
+	  display: inline-block;
+	  height: 100%;
+	  vertical-align: middle;
+	}
+
+	#selectContainer {
+		position: absolute;
+		top: -320px;
+		z-index: 10000001;
+		background-color: yellow;
+		width: 100%;
+		padding: 0;
+	}
 }
 
 @media only screen and (max-width: 550px) {

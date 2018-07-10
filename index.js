@@ -130,3 +130,20 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+const containerOn = document.getElementById('selectContainerOn');
+const containerOff = document.getElementById('selectContainerOff');
+const selectContainer = document.getElementById('selectContainer');
+const body = document.getElementsByTagName('body')[0];
+
+containerOn.addEventListener('click', function() {
+    selectContainer.classList.add('transition');
+    selectContainer.style.top = '0';
+});
+
+containerOff.addEventListener('click', function() {
+      selectContainer.style.top = '-320px';
+    setTimeout(function() {
+      selectContainer.classList.remove('transition');
+    }, 400);
+});
