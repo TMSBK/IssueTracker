@@ -9,6 +9,10 @@ ul {
 	height: 100%;
 }
 
+body {
+	min-height: 550px;
+}
+
 html {
 	background-color: green;
 }
@@ -67,10 +71,10 @@ footer {
 }
 
 .transition {
-	transition: all 0.3s;
+	transition: all 0.5s;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
 
 	nav {
 		position: relative;
@@ -85,13 +89,13 @@ footer {
 		width: 100%;
 		height: 50%;
 		position: absolute;
-		top: -150%;
+		top: -225%;
 	}
 
 	.navItem {
 		background-color: red;
 		width: 100%;
-		height: 100%;
+		height: 150%;
 	}
 
 	#hamburger {
@@ -116,6 +120,10 @@ form {
 	width: 100%;
 	text-align: center;
 	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
 }
 
 #selectContainerOn,
@@ -128,20 +136,32 @@ form {
 	display: flex;
 	flex-wrap: wrap;
 	width: calc(100% - 20px);
-	height: 80px;
+	height: 25%;
 	justify-content: center;
 	margin: auto;
 	padding-top: 10px;
 }
 
 .selectItem {
-	width: 15%;
-	padding: 15px;
-	margin: 25px 5px;
+	display: none;
+}
+
+.selectItemShell {
+	width: calc(100% / 3);
+	height: 50%;
+	background-color: DodgerBlue;
+	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75);
+}
+
+.selectItemShell:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 textarea {
-	width: 75.5%;
+	width: 80%;
 	height: 30%;
 	border-radius: 20px;
 	resize: none;
@@ -154,7 +174,9 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-top: 5px;
+	width: 40%;
+	min-width: 300px;
+	padding: 0 10px;
 }
 
 .radioInputSpan {
@@ -189,7 +211,7 @@ textarea {
 	color: #854400;
 	font-size: 20px;
 	width: 100%;
-	margin: 5px 0 15px 0;
+	margin: 0 0 35px 0;
 }
 
 #submitButton {
@@ -198,13 +220,22 @@ textarea {
 	cursor: pointer;
 	background-color: #666;
 	color: white;
-	width: 30%;
-	height: 40px;
+	width: 215px;
+	height: 37px;
+	margin-top: 5px;
 	border-radius: 50px;
 	transition: background-color 0.3s;
 	box-shadow: 0 9px #b9b9b9;
 	font-size: 16px;
-	margin: 15px;
+}
+
+#submitButtonShell {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 40%;
+	min-width: 300px;
+	padding: 0 10px;
 }
 
 #submitButton:hover {
@@ -216,59 +247,11 @@ textarea {
 	transform: translateY(4px);
 }
 
-/*the container must be positioned relative:*/
-.custom-select {
-  	position: relative;
-  	font-family: Arial;
-  	width: calc(100% / 3);
-}
-.custom-select select {
-  	display: none; /*hide original SELECT element:*/
-}
-.select-selected {
-  	background-color: DodgerBlue;
-}
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  	position: absolute;
-  	content: "";
-  	top: 16px;
-  	right: 10px;
-  	width: 0;
-  	height: 0;
-  	border: 6px solid transparent;
-  	border-color: #fff transparent transparent transparent;
-}
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  	border-color: transparent transparent #fff transparent;
-  	top: 9px;
-}
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  	color: #ffffff;
-  	padding: 10px 16px;
-  	cursor: pointer;
-  	border: 1px solid rgba(0,0,0,0.1);
-}
-/*style items (options):*/
-.select-items {
-  	position: absolute;
-  	background-color: DodgerBlue;
-  	top: 100%;
-  	left: 0;
-  	right: 0;
-  	z-index: 99;
-}
-/*hide the items when the select box is closed:*/
-.select-hide {
-  	display: none;
-}
-.select-items div:hover, .same-as-selected {
-  	background-color: rgba(0, 0, 0, 0.1);
-}
+@media only screen and (max-width: 820px) {
 
-@media only screen and (max-width: 800px) {
+	body {
+		min-height: 550px;
+	}
 
 	#selectContainerOn {
 		display: block;
@@ -294,21 +277,40 @@ textarea {
 
 	#selectContainer {
 		position: absolute;
-		top: -320px;
+		top: -100%;
 		z-index: 10000001;
 		background-color: yellow;
 		width: 100%;
+		height: 60%;
 		padding: 0;
+	}
+
+	.selectItemShell {
+		width: 100%;
+		height: calc(100% / 6);
 	}
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 820px) {
 
-	.custom-select {
-	  	width: 100%;
+	#submitButtonShell,
+	#ratings {
+		height: 50px;
 	}
 
+	#ratingSign {
+		margin-bottom: 0;
+	}
+
+	textarea {
+		margin: 0;
+	}
+
+}
+
+@media only screen and (max-width: 580px) {
+
 	#selectContainer {
-		height: calc(6 * 40px)
+		height: 60%;
 	}
 }

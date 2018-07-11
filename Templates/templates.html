@@ -8,46 +8,39 @@
     <form action="">
     	<div id="selectContainerOn" class="navItem">BEJELENTÉS ADATOK</div>
     	<div id="selectContainer">
-    		<div class="custom-select">
+    		<div class="selectItemShell">
 		    	<select class="selectItem">        
-		            <option value="Objektum">Objektum</option>
-		            <option value="Objektum">Objektum</option>
-		            <option value="Objektum">Objektum</option>
-		            <option value="Objektum">Objektum</option>
-		            <option value="Objektum">Objektum</option>
-		            <option value="Objektum">Objektum</option>
-		            <option value="Objektum">Objektum</option>
+		            <option value="Objektum"></option>
 		    	</select>
 	    	</div>
-    		<div class="custom-select">
+    		<div class="selectItemShell">
 		    	<select class="selectItem">       
-		            <option value="Ingatlan">Ingatlan</option>
+		            <option value="Ingatlan"></option>
 		    	</select>
 	    	</div>
-    		<div class="custom-select">
+    		<div class="selectItemShell">
 		    	<select class="selectItem">        
-		            <option value="Szakterület">Szakterület</option>
+		            <option value="Szakterület"></option>
 		    	</select>
 		    </div>
-    		<div class="custom-select">
+    		<div class="selectItemShell">
 		    	<select class="selectItem">         
-		            <option value="Tipus">Bejelentés típusa</option>
+		            <option value="Tipus"></option>
 		    	</select>
 		    </div>
-    		<div class="custom-select">
+    		<div class="selectItemShell">
 		    	<select class="selectItem">         
-		            <option value="Besorolás">Besorolás</option>
+		            <option value="Besorolás"></option>
 		    	</select>
 		    </div>
-    		<div class="custom-select">
+    		<div class="selectItemShell">
 		    	<select class="selectItem">         
-		            <option value="SLA">Szolgáltatási szint</option>
+		            <option value="SLA"></option>
 		    	</select>
 		    </div>
 		    <div id="selectContainerOff">VISSZA</div>
     	</div>
     	<textarea type="text" name="issue"></textarea><br>
-		<input type="submit" value="Beküldés" id="submitButton">
 		<div id="ratings">
             <span id="1p" class="radioInputSpan">
               	<input name='rating' class="radioInput" type="radio" value="1" name="radioButton" onchange="ratingTracker(this)">
@@ -66,6 +59,9 @@
             </span>
             <p id="ratingSign">Kérem értékelje szolgáltatásunkat!</p>
         </div>
+ 		<div id="submitButtonShell">
+	        <input type="submit" value="Beküldés" id="submitButton">
+	    </div>
     </form>
 </template>
 
