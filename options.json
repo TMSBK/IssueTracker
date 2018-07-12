@@ -3,50 +3,50 @@
   		{
 	    "name": "Objektum",
 	    "values": {
-	    	"id-1": "ROS01",
-	    	"id-2": "ROS02",
-	    	"id-3": "ROS03",
-	    	"id-4": "ROS04"
+	    	"id1": "ROS01",
+	    	"id2": "ROS02",
+	    	"id3": "ROS03",
+	    	"id4": "ROS04"
 	    	}
 	    },
 	    {
 	    "name": "Ingatlan",
 	    "values": {
-	    	"id-1": "Fő út 3.",
-	    	"id-2": "Kis utca 4.",
-	    	"id-3": "Sándor utca 7.",
-	    	"id-4": "Villányi út 9."
+	    	"id1": "Fő út 3.",
+	    	"id2": "Kis utca 4.",
+	    	"id3": "Sándor utca 7.",
+	    	"id4": "Villányi út 9."
 	    	}
 	    },
 	    {
 	    "name": "Szakterület",
 	    "values": {
-	    	"id-1": "Műszaki üemeltetés",
-	    	"id-2": "Kertészet",
-	    	"id-3": "Takarítás"
+	    	"id1": "Műszaki üzemeltetés",
+	    	"id2": "Kertészet",
+	    	"id3": "Takarítás"
 	    	}
 	    },
 	    {
 	    "name": "Típus",
 	    "values": {
-	    	"id-1": "Hibabejelentés",
-	    	"id-2": "Igénybejelentés",
-	    	"id-3": "Karbantartás"
+	    	"id1": "Hibabejelentés",
+	    	"id2": "Igénybejelentés",
+	    	"id3": "Karbantartás"
 	    	}
 	    },
 	    {
 	    "name": "Besorolás",
 	    "values": {
-	    	"id-1": "Normál",
-	    	"id-2": "Havaria",
-	    	"id-3": "Sürgős"
+	    	"id1": "Normál",
+	    	"id2": "Havaria",
+	    	"id3": "Sürgős"
 	    	}
 	    },
 	    {
 	    "name": "Sz_szint",
 	    "values": {
-	    	"id-1": "Munkaidőben",
-	    	"id-2": "Munkaidőn kívül"
+	    	"id1": "Munkaidőben",
+	    	"id2": "Munkaidőn kívül"
 	    	}
 	    }
 	]
