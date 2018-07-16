@@ -22,23 +22,16 @@ var templatesImport = document.getElementById('templates');
 // Retrieve the loaded templates.
 var templates = templatesImport.import
 
+/* =============================================== BEJELENTŐ FORM ================================================ */
+
 // Get the template.
-var template = templates.getElementById('form');
+var formTemplate = templates.getElementById('form');
 
 // Clone the template content.
-var clone = document.importNode(template.content, true);
+var formTemplateClone = document.importNode(formTemplate.content, true);
 
 // Add the blog post to the page.
-document.getElementById('main').appendChild(clone);
-
-const firstNav = document.getElementById('1');
-firstNav.addEventListener('click', function() {
-  	// Add the blog post to the page.
-  	document.getElementById('main').appendChild(clone);
-});
-
-
-/* ==================== BEJELENTŐ FORM ==================== */
+document.getElementById('main').appendChild(formTemplateClone);
 
 
 /* Ez a kód kezeli az értékelő pontokat */
@@ -49,14 +42,13 @@ function ratingTracker(radioButton) {
   	radioButtonValue = radioButton.value;
   	const ratingSign = document.getElementById('ratingSign');
   	ratingSign.textContent = radioButtonValue + ' pont';
-
   	for (let k=1; k <= 5; k++) {
-    		let radioElement = document.getElementById(k + 'p');
-    		if (k<=radioButtonValue) {
-    		    radioElement.classList.add('radioInputSpanBackground');
-    		} else {
-    		    radioElement.classList.remove('radioInputSpanBackground');
-    		}
+    	let radioElement = document.getElementById(k + 'p');
+    	if (k<=radioButtonValue) {
+    		radioElement.classList.add('radioInputSpanBackground');
+    	} else {
+    		radioElement.classList.remove('radioInputSpanBackground');
+    	}
   	}
 }
 
@@ -94,17 +86,30 @@ fetch('options.json', {
 /* Itt töltjük fel a beállítások hamburger menüt adatokkal */
 
 function fillSelectShell(options) {
-  for (let i = 0; i < selectShell.length; i++) {
-      selectShell[i].innerHTML = options.options[i].name;
-      let value = Object.values(options.options[i].values);
-      for(let j = 0; j < value.length; j++) {
-          let option = document.createElement('div');
-          option.innerHTML = value[j];
-          option.classList.add('optionShell');
-          option.style.display = 'none';
-          selectShell[i].append(option);
-      }
-  }
+    for (let i = 0; i < selectShell.length; i++) {
+        selectShell[i].getElementsByTagName('p')[0].innerHTML = options.options[i].name;
+        let value = Object.values(options.options[i].values);
+        let back = document.createElement('div');
+        back.innerHTML = options.options[i].name;
+        back.classList.add('optionShell');
+        back.style.display = 'none';
+        selectShell[i].append(back);
+        back.addEventListener('click', function() {
+            selectShell[i].getElementsByTagName('p')[0].innerHTML = options.options[i].name;
+            selectShell[i].getElementsByTagName('option')[0].value = options.options[i].name;
+        });
+        for(let j = 0; j < value.length; j++) {
+            let option = document.createElement('div');
+            option.innerHTML = value[j];
+            option.classList.add('optionShell');
+            option.style.display = 'none';
+            option.addEventListener('click', function() {
+                selectShell[i].getElementsByTagName('p')[0].innerHTML = this.innerHTML;
+                selectShell[i].getElementsByTagName('option')[0].value = this.innerHTML;
+            });
+            selectShell[i].append(option);
+        }    
+    }
 }
 
 /* Itt kezeljük a legördülőket */
@@ -115,22 +120,17 @@ for(let i = 0; i < selectShell.length; i++) {
     let optionShellArray = selectShell[i].getElementsByClassName('optionShell');
     selectShell[i].addEventListener('click', function() {
         if(this.getElementsByClassName('optionShell')[0].style.display === 'none') {
-              for(let j = 0; j < optionShell.length; j++) {
-                  optionShell[j].style.display = 'none';
-              }
-              for(let j = 0; j < optionShellArray.length; j++) {
-                  optionShellArray[j].style.display = 'block';
-              }
+            for(let j = 0; j < optionShell.length; j++) {
+                optionShell[j].style.display = 'none';
+            }
+            for(let j = 0; j < optionShellArray.length; j++) {
+                optionShellArray[j].style.display = 'block';
+            }
         } else {
-              for(let j = 0; j < optionShellArray.length; j++) {
-                  optionShellArray[j].style.display = 'none';
-              }
+            for(let j = 0; j < optionShellArray.length; j++) {
+                optionShellArray[j].style.display = 'none';
+            }
         }
     })
 }
 
-for (let z = 0; z < optionShell.length; z++) {
-    optionShell[z].addEventListener('click', function() {
-    console.log('segg');
-  })
-}
