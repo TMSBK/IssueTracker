@@ -1,0 +1,95 @@
+{
+  "issues": [
+	  	{
+	  	"id" : "001",
+	  	"Státusz" : "Bejelentve",
+	  	"Bejelentve" : "2018.05.01. 10:12",
+	  	"Várható_Kezdés" : "2018.05.02. 10:12",
+	  	"Objektum" : "ROS03",
+	  	"Ingatlan" : "Kis utca 4.",
+	  	"Szakterület" : "Kertészet",
+	  	"Típus" : "Igénybejelentés",
+	  	"Besorolás" : "Normál",
+	  	"Sz_szint" : "Munkaidőben",
+	  	"issue" : "Eldugult a lefolyó"
+	  	}, 
+	  	{
+	  	"id" : "002",
+	  	"Státusz" : "Munkafelvétel",
+	  	"Bejelentve" : "2018.05.01. 10:12",
+	  	"Várható_Kezdés" : "2018.05.01. 12:12",
+	  	"Objektum" : "ROS02",
+	  	"Ingatlan" : "Nagy utca 4.",
+	  	"Szakterület" : "Üzemeltetés",
+	  	"Típus" : "Hibabejelentés",
+	  	"Besorolás" : "Havária",
+	  	"Sz_szint" : "Munkaidőn kívül",
+	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	},
+	  	{
+	  	"id" : "003",
+	  	"Státusz" : "Jóváhagyásra",
+	  	"Bejelentve" : "2018.05.01. 10:12",
+	  	"Várható_Kezdés" : "2018.05.01. 12:12",
+	  	"Objektum" : "ROS02",
+	  	"Ingatlan" : "Nagy utca 4.",
+	  	"Szakterület" : "Üzemeltetés",
+	  	"Típus" : "Hibabejelentés",
+	  	"Besorolás" : "Havária",
+	  	"Sz_szint" : "Munkaidőn kívül",
+	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	},
+	  	{
+	  	"id" : "004",
+	  	"Státusz" : "Végrehajtásra",
+	  	"Bejelentve" : "2018.05.01. 10:12",
+	  	"Várható_Kezdés" : "2018.05.01. 12:12",
+	  	"Objektum" : "ROS02",
+	  	"Ingatlan" : "Nagy utca 4.",
+	  	"Szakterület" : "Üzemeltetés",
+	  	"Típus" : "Hibabejelentés",
+	  	"Besorolás" : "Havária",
+	  	"Sz_szint" : "Munkaidőn kívül",
+	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	},
+	  	{
+	  	"id" : "005",
+	  	"Státusz" : "TeljesítésIgazolásra",
+	  	"Bejelentve" : "2018.05.01. 10:12",
+	  	"Várható_Kezdés" : "2018.05.01. 12:12",
+	  	"Objektum" : "ROS02",
+	  	"Ingatlan" : "Nagy utca 4.",
+	  	"Szakterület" : "Üzemeltetés",
+	  	"Típus" : "Hibabejelentés",
+	  	"Besorolás" : "Havária",
+	  	"Sz_szint" : "Munkaidőn kívül",
+	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	},
+	  	{
+	  	"id" : "006",
+	  	"Státusz" : "Ellenőrzésre",
+	  	"Bejelentve" : "2018.05.01. 10:12",
+	  	"Várható_Kezdés" : "2018.05.01. 12:12",
+	  	"Objektum" : "ROS02",
+	  	"Ingatlan" : "Nagy utca 4.",
+	  	"Szakterület" : "Üzemeltetés",
+	  	"Típus" : "Hibabejelentés",
+	  	"Besorolás" : "Havária",
+	  	"Sz_szint" : "Munkaidőn kívül",
+	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	},
+	  	{
+	  	"id" : "007",
+	  	"Státusz" : "Lezárva",
+	  	"Bejelentve" : "2018.05.01. 10:12",
+	  	"Várható_Kezdés" : "2018.05.01. 12:12",
+	  	"Objektum" : "ROS02",
+	  	"Ingatlan" : "Nagy utca 4.",
+	  	"Szakterület" : "Üzemeltetés",
+	  	"Típus" : "Hibabejelentés",
+	  	"Besorolás" : "Havária",
+	  	"Sz_szint" : "Munkaidőn kívül",
+	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	}
+	]
+}

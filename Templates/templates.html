@@ -8,43 +8,6 @@
     <form action="">
     	<div id="selectContainerOn" class="navItem">BEJELENTÉS ADATOK</div>
     	<div id="selectContainer">
-    		<div class="selectShell">
-    			<p></p>
-		    	<select name="Objektum" class="selectItem">        
-		            <option value="Objektum"></option>
-		    	</select>
-	    	</div>
-    		<div class="selectShell">
-    			<p></p>
-		    	<select name="Ingatlan" class="selectItem">       
-		            <option value="Ingatlan"></option>
-		    	</select>
-	    	</div>
-    		<div class="selectShell">
-    			<p></p>
-		    	<select name="Szakterület" class="selectItem">        
-		            <option value="Szakterület"></option>
-		    	</select>
-		    </div>
-    		<div class="selectShell">
-    			<p></p>
-		    	<select name="Típus" class="selectItem">         
-		            <option value="Tipus"></option>
-		    	</select>
-		    </div>
-    		<div class="selectShell">
-    			<p></p>
-		    	<select name="Besorolás" class="selectItem">         
-		            <option value="Besorolás"></option>
-		    	</select>
-		    </div>
-    		<div class="selectShell">
-    			<p></p>
-		    	<select name="SLA" class="selectItem">         
-		            <option value="SLA"></option>
-		    	</select>
-		    </div>
-		    <div id="selectContainerOff">VISSZA</div>
     	</div>
     	<textarea type="text" name="issue"></textarea><br>
 		<div id="ratings">
@@ -79,7 +42,12 @@
 
 
 <template id="issues">
-	
+	<input type="checkbox" id="filter" onchange="filter()">Folyamatban lévő hibák</input>
+	<div id="issueContainer">
+		<div id="issuePanel">
+		</div>
+	</div>
+	</div>
 </template>
 
 
