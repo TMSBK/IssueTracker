@@ -5,11 +5,11 @@
 -->
 
 <template id="form">
-    <form action="">
-    	<div id="selectContainerOn" class="navItem">BEJELENTÉS ADATOK</div>
+    <form action="" id="issueForm">
+    	<div id="selectContainerOn" class="navItem">Bejelentés adatai</div>
     	<div id="selectContainer">
     	</div>
-    	<textarea type="text" name="issue"></textarea><br>
+    	<textarea type="text" name="issue" placeholder="Kérem írja le a tapasztalt hibát.."></textarea><br>
 		<div id="ratings">
             <span id="1p" class="radioInputSpan">
               	<input name='rating' class="radioInput" type="radio" value="1" name="radioButton" onchange="ratingTracker(this)">
@@ -40,17 +40,20 @@
 
 -->
 
-
 <template id="issues">
-	<input type="checkbox" id="filter" onchange="filter()">Folyamatban lévő hibák</input>
+	<div id="filterContainer">
+		<div id="filter">Folyamatban</div>
+	</div>
 	<div id="issueContainer">
 		<div id="issuePanel">
+			<div id="issueData">
+			</div>
+			<div id="closeIssuePanel">
+			</div>
 		</div>
 	</div>
 	</div>
 </template>
-
-
 
 <!-- 
 
@@ -59,5 +62,11 @@
 -->
 
 <template id="password">
-	
+	<div id="notSoPrettyDiv"></div>
+	<form id="passwordForm" action="">
+		<input class="input" type="text" placeholder="Felhasználónév"></input>
+		<input class="input" type="text" placeholder="Új jelszó"></input>
+		<input class="input" type="text" placeholder="Új jelszó mégegyszer"></input><br>
+		<input class="submit" type="submit" value="Módosítás">
+	</form>
 </template>

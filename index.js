@@ -16,6 +16,16 @@ hamburger.addEventListener('click', function() {
   	}
 });
 
+for (let i=1; i <= 3; i++) {
+    document.getElementById(i).addEventListener('click', function() {
+        navContainer.setAttribute('style', 'top: -225%');
+        setTimeout(function() {
+           navContainer.classList.remove('transition');
+        }, 400);
+        navFlag = false;
+    })
+}
+
 function contentLoader(templateName, functionName) {
 
     fetch('Templates/templates.html')
@@ -41,6 +51,14 @@ document.getElementById('1').addEventListener('click', function(){
 document.getElementById('2').addEventListener('click', function(){
     contentLoader('issues', issueHelper);
 });
+
+document.getElementById('3').addEventListener('click', function(){
+    contentLoader('password', passwordHelper);
+});
+
+function passwordHelper() {
+  console.log('teszt');
+}
 
 
 /* =============================================== BEJELENTŐ FORM ================================================ */
@@ -182,6 +200,7 @@ function issueHelper() {
 
     let html = '<h3></h3>';
     let issueContainer = document.getElementById('issueContainer');
+    const issueData = document.getElementById('issueData'); 
     const issuePanel = document.getElementById('issuePanel'); 
 
     function fillIssue(datas) {
@@ -191,30 +210,30 @@ function issueHelper() {
             createdIssue.classList.add('issue'); // Itt adunk class-t hozzá
             let issues = document.getElementsByClassName('issue'); 
             issueContainer.append(createdIssue); // Itt adjuk hozzá a konténerhez
-            issues[i].getElementsByTagName('h3')[0].innerHTML = datas.issues[i].issue;
+            issues[i].getElementsByTagName('h3')[0].innerHTML = datas.issues[i].issue.substring(0,23) + '...';
 
             if (datas.issues[i].Státusz === 'Bejelentve') {
-                createdIssue.style.backgroundColor = 'brown';
+                createdIssue.style.backgroundColor = '#d35400';
                 createdIssue.classList.add('active');
             } 
             else if (datas.issues[i].Státusz === 'Munkafelvétel') {
-                createdIssue.style.backgroundColor = 'purple';
+                createdIssue.style.backgroundColor = '#9b59b6';
                 createdIssue.classList.add('active');
             } 
             else if (datas.issues[i].Státusz === 'Jóváhagyásra') {
-                createdIssue.style.backgroundColor = 'coral';
+                createdIssue.style.backgroundColor = '#e67e22';
                 createdIssue.classList.add('active');
             } 
             else if (datas.issues[i].Státusz === 'Végrehajtásra') {
-                createdIssue.style.backgroundColor = 'DeepSkyBlue';
+                createdIssue.style.backgroundColor = '#3498db';
                 createdIssue.classList.add('active');
             } 
             else if (datas.issues[i].Státusz === 'TeljesítésIgazolásra') {
-                createdIssue.style.backgroundColor = 'orange';
+                createdIssue.style.backgroundColor = '#f39c12';
                 createdIssue.classList.add('finished');
             } 
             else if (datas.issues[i].Státusz === 'Ellenőrzésre') {
-                createdIssue.style.backgroundColor = 'yellow';
+                createdIssue.style.backgroundColor = '#f1c40f';
                 createdIssue.classList.add('finished');
             } 
             else if (datas.issues[i].Státusz === 'Lezárva') {
@@ -222,32 +241,75 @@ function issueHelper() {
                 createdIssue.classList.add('finished');
             } 
 
-            issuePanel.innerHTML = '<h3></h3><h3></h3><h3></h3><h3></h3><h3></h3><h3></h3><h3></h3><h3></h3><h3></h3><h3></h3><h3></h3>';
-            
+            issueData.innerHTML = '<h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><h4></h4><h3></h3><div></div>';
+
             issues[i].addEventListener('click', function() {
-                issuePanel.getElementsByTagName('h3')[0].innerHTML = 'Bejelentés száma: ' + datas.issues[i].id;
-                issuePanel.getElementsByTagName('h3')[1].innerHTML = 'Bejelentés státusza: ' + datas.issues[i].Státusz;
-                issuePanel.getElementsByTagName('h3')[2].innerHTML = 'Bejelentés időpontja: ' + datas.issues[i].Bejelentve;
-                issuePanel.getElementsByTagName('h3')[3].innerHTML = 'Kiérkezés várható időpontja: ' + datas.issues[i].Várható_Kezdés;
-                issuePanel.getElementsByTagName('h3')[4].innerHTML = 'Objektum megnevezése: ' + datas.issues[i].Objektum;
-                issuePanel.getElementsByTagName('h3')[5].innerHTML = 'Ingatlan megnevezése: ' + datas.issues[i].Ingatlan;
-                issuePanel.getElementsByTagName('h3')[6].innerHTML = 'Szakterület: ' + datas.issues[i].Szakterület;
-                issuePanel.getElementsByTagName('h3')[7].innerHTML = 'Típus: ' + datas.issues[i].Típus;
-                issuePanel.getElementsByTagName('h3')[8].innerHTML = 'Besorolás: ' + datas.issues[i].Besorolás;
-                issuePanel.getElementsByTagName('h3')[9].innerHTML = 'Szolgáltatási szint: ' + datas.issues[i].Sz_szint;
-                issuePanel.getElementsByTagName('h3')[10].innerHTML = 'Bejelentés tartalma: ' + datas.issues[i].issue;
-                issuePanel.style.display = 'block';
+                issuePanel.classList.add('transition');
+                issuePanel.setAttribute('style', 'top: 0');
+                issueData.scrollTop = 0;
+                issueData.getElementsByTagName('h4')[0].innerHTML = 'Bejelentés száma:';
+                issueData.getElementsByTagName('h3')[0].innerHTML = datas.issues[i].id;
+                issueData.getElementsByTagName('h4')[1].innerHTML = 'Bejelentés státusza:';
+                issueData.getElementsByTagName('h3')[1].innerHTML = datas.issues[i].Státusz;
+                issueData.getElementsByTagName('h4')[2].innerHTML = 'Bejelentés időpontja:';
+                issueData.getElementsByTagName('h3')[2].innerHTML = datas.issues[i].Bejelentve;
+                issueData.getElementsByTagName('h4')[3].innerHTML = 'Kiérkezés várható időpontja:';
+                issueData.getElementsByTagName('h3')[3].innerHTML = datas.issues[i].Várható_Kezdés;
+                issueData.getElementsByTagName('h4')[4].innerHTML = 'Objektum megnevezése:';
+                issueData.getElementsByTagName('h3')[4].innerHTML = datas.issues[i].Objektum;
+                issueData.getElementsByTagName('h4')[5].innerHTML = 'Ingatlan megnevezése:';
+                issueData.getElementsByTagName('h3')[5].innerHTML = datas.issues[i].Ingatlan;
+                issueData.getElementsByTagName('h4')[6].innerHTML = 'Szakterület:';
+                issueData.getElementsByTagName('h3')[6].innerHTML = datas.issues[i].Szakterület;
+                issueData.getElementsByTagName('h4')[7].innerHTML = 'Típus:';
+                issueData.getElementsByTagName('h3')[7].innerHTML = datas.issues[i].Típus;
+                issueData.getElementsByTagName('h4')[8].innerHTML = 'Besorolás:';
+                issueData.getElementsByTagName('h3')[8].innerHTML = datas.issues[i].Besorolás;
+                issueData.getElementsByTagName('h4')[9].innerHTML = 'Szolgáltatási szint:';
+                issueData.getElementsByTagName('h3')[9].innerHTML = datas.issues[i].Sz_szint;
+                issueData.getElementsByTagName('h4')[10].innerHTML = 'Bejelentés tartalma:';
+                issueData.getElementsByTagName('h3')[10].innerHTML = datas.issues[i].issue;
             });
         }
+
+
+        const closeIssuePanel = document.getElementById('closeIssuePanel');
+        closeIssuePanel.innerHTML = 'VISSZA';
+
+        closeIssuePanel.addEventListener('click', function() {
+            issuePanel.setAttribute('style', 'top: -225%');
+            setTimeout(function() {
+                issuePanel.classList.remove('transition');
+            }, 400); 
+        })
     }
-}
 
-let createdIssues = document.getElementsByClassName('finished');
+    let createdIssues = document.getElementsByClassName('issue');
+    const filter = document.getElementById('filter');
+    let filterFlag = false;
 
-function filter() {
-    for(let i = 0; i < createdIssues.length; i++) {
-        if(createdIssues[i].classList.contains('finished')) {
-            createdIssues[i].style.display = 'none';
+    filter.addEventListener('click', function() {
+        
+        if(filterFlag === true) {
+            for(let i = 0; i < createdIssues.length; i++) {
+                createdIssues[i].style.display = 'block';
+                filter.style.boxShadow = '0 9px #b9b9b9';
+                filter.style.transform = 'translateY(0px)';
+                filter.innerHTML = 'Folyamatban';
+            }
+            filterFlag = false;
         }
-    }
+        else if (filterFlag === false) {
+            for(let i = 0; i < createdIssues.length; i++) {
+                if(createdIssues[i].classList.contains('finished')) {
+                    createdIssues[i].style.display = 'none';
+                    filter.style.boxShadow = '0 5px #666';
+                    filter.style.transform = 'translateY(4px)';
+                    filter.innerHTML = 'Összes';
+                }
+            }
+            filterFlag = true;
+        }
+    });
 }
+

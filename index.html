@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<link rel="manifest" href="/manifest.json">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<meta name="theme-color" content="#252831">
-			<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css"/>
-			<link rel="stylesheet" href="index.css">
-			<link rel="import" href="Templates/templates.html" id="templates">
-			<meta charset="UTF-8">
-			<title>FutureIssue</title>
-		</head>
-		<body>
-			<nav>
-				<ul id='navContainer'>
-					<li class='navItem image'>IMAGE</li>
-					<li class='navItem' id='1'>Új bejelentés</li>
-					<li class='navItem' id='2'>Hibák</li>
-					<li class='navItem' id='3'>Jelszó módosítás</li>
-					<li class='navItem image'>IMAGE</li>
-					<li class='navItem' id='hamburger'>HAMBURGER</li>
-				</ul>
-			</nav>
-			<main id='main'>
-				<h1>Köszöntjük a bejelentő felületünkön!</h1>
-			</main>
-			<footer>
-				<ul id='footerContainer'>
-					<li class='footerItem'>ICON</li>
-					<li class='footerItem'>ICON</li>
-					<li class='footerItem'>ICON</li>
-					<li class='footerItem'>ICON</li>
-				</ul>
-			</footer>
-			<script src='index.js'></script>
-		</body>
-	</html>
+<html lang="en">
+	<head>
+		<link rel="manifest" href="/manifest.json">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#252831">
+		<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css"/>
+		<link rel="stylesheet" href="index.css">
+		<link rel="import" href="Templates/templates.html" id="templates">
+		<meta charset="UTF-8">
+		<!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
+		<title>FutureIssue</title>
+	</head>
+	<body>
+		<nav>
+			<ul id='navContainer'>
+				<li class='imageContainer'><img class="navImg" src="Pictures/Libri.png"></li>
+				<li class='navItem' id='1'>Új bejelentés</li>
+				<li class='navItem' id='2'>Bejelentések</li>
+				<li class='navItem' id='3'>Jelszó módosítás</li>
+				<li class='imageContainer'><img class="navImg" src="Pictures/fmlogo.png"></li>
+				<li class='navItem' id='hamburger'>Menü</li>
+			</ul>
+		</nav>
+		<main id='main'>
+			<div id="welcomeContainer">
+				<img id="FMlogo" src="Pictures/fmlogo.png">
+			</div>
+		</main>
+		<footer>
+			<ul id='footerContainer'>
+				<li class='footerItem'><img class="logo" src="Pictures/if_facebook_328029.png"></li>
+				<li class='footerItem'><img class="logo" src="Pictures/if_firefox_386286.png"></li>
+				<li class='footerItem'><img class="logo" src="Pictures/if_mail_328046.png"></li>
+				<li class='footerItem'><img class="logo" src="Pictures/if_viber_328079.png"></li>
+			</ul>
+		</footer>
+		<script src='index.js'></script>
+	</body>
+</html>

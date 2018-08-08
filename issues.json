@@ -11,7 +11,7 @@
 	  	"Típus" : "Igénybejelentés",
 	  	"Besorolás" : "Normál",
 	  	"Sz_szint" : "Munkaidőben",
-	  	"issue" : "Eldugult a lefolyó"
+	  	"issue" : "UPS helyiség aspirációs központ összevont hiba"
 	  	}, 
 	  	{
 	  	"id" : "002",
@@ -24,7 +24,7 @@
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	"issue" : "A 4.emeleten lévő jobb oldali személy lift ajtó karistoló hangot ad és valamilyen alkatrész ki áll belőle. Kérnénk a hiba mihamarabb kijavitását."
 	  	},
 	  	{
 	  	"id" : "003",
@@ -37,7 +37,7 @@
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	"issue" : "Kedves Üzemeltetés! Az éjszakai őrség jelezte, hogy a parkolóban lévő kandeláberekből 8 db nem világít, illetve kantin oldalában lévő plusz egy kislámpa! Kérni szeretném a javításukat!"
 	  	},
 	  	{
 	  	"id" : "004",
@@ -50,7 +50,7 @@
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	"issue" : "Kedves üzemeltetés! Földszinti szerverszobában nem működik a klíma, ennek mihamarabbi javítását kérném! "
 	  	},
 	  	{
 	  	"id" : "005",
@@ -63,7 +63,7 @@
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	"issue" : "Az épületben az egyik fázis kiesése miatt részleges áramszünet volt."
 	  	},
 	  	{
 	  	"id" : "006",
@@ -76,7 +76,7 @@
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	"issue" : "Kedves Üzemeltetés! 3. emeleti lift előtérben lévő tűzgátló ajtó, nyitáskor meg akad a hidegburkolatban. "
 	  	},
 	  	{
 	  	"id" : "007",
@@ -89,7 +89,7 @@
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Nem zárható a bejárati ajtó"
+	  	"issue" : "A takarítási, karbantartási, gondnoki feladatok rendben ellátva. A személykapu beléptető rendszere nem működik, jeleztem a BFO-nak. Rendkívüli esemény nem történt."
 	  	}
 	]
 }

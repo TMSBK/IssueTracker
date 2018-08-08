@@ -1,6 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	color: #2c3e50;
 }
 
 html,
@@ -11,31 +13,85 @@ ul {
 
 body {
 	min-height: 550px;
+	max-width: 1500px;
+	margin: auto;
+	background-color: white;
 }
 
 html {
-	background-color: green;
-}
-
-body {
-	max-width: 1800px;
-	margin: auto;
+	background-color: #ecf0f1;
 }
 
 nav {
-	height: 12%;
-	background-color: yellow;
+	height: 15%;
 	z-index: 10000000;
+	background-color: #3498db;
 }
 
 main {
-	height: 78%;
-	background-color: skyblue;
+	height: 70%;
 }
 
 footer {
-	height: 10%;
-	background: pink;
+	height: 15%;
+	z-index: 10000000;
+	background-color: #2ecc71;
+}
+
+#welcomeContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#welcomeContainer {
+	background: linear-gradient(231deg, rgba(52, 152, 219, 0.6), #ffffff);
+	background-size: 400% 400%;
+	-webkit-animation: BackgroundAnimation 15s ease infinite;
+	-moz-animation: BackgroundAnimation 15s ease infinite;
+	animation: BackgroundAnimation 15s ease infinite;
+}
+
+@-webkit-keyframes BackgroundAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes BackgroundAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes BackgroundAnimation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#FMlogo {
+	margin: auto;
+	max-height: 80%;
+	max-width: 80%;
+	z-index: 1000000;
+}
+
+.navImg {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.logo {
+	height: 60%;
+	margin: auto;
+	transition: transform 0.2s;
+	cursor: pointer;
+}
+
+.logo:hover {
+	transform: translateX(8px);
 }
 
 #navContainer,
@@ -45,16 +101,30 @@ footer {
 	justify-content: center;
 }
 
-.navItem,
-.footerItem {
+.imageContainer {
 	display: block;
 	height: 100%;
 	width: 20%;
-	background-color: rgba(255,255,255,0.4);
 	min-width: 160px;
 	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75);
 	cursor: pointer;
+}
+
+.navItem,
+.footerItem {
+	list-style-type: none;
+	height: 100%;
+	width: 20%;
+	min-width: 160px;
+	text-align: center;
+	transition: background-color 0.2s, color 0.2s;
+	cursor: pointer;
+	user-select: none;
+}
+
+.footerItem {
+	display: flex;
+	justify-content: center;
 }
 
 .navItem:before,
@@ -74,13 +144,29 @@ footer {
 	transition: all 0.5s;
 }
 
+@media only screen and (min-width: 820px) {
+
+	.navItem:hover {
+		background-color: #2980b9;
+		color: #ecf0f1;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+
+	body {
+		border-left: 1px solid #2c3e50;
+		border-right: 1px solid #2c3e50;
+	}
+}
+
 @media only screen and (max-width: 820px) {
 
 	nav {
 		position: relative;
 	}
 
-	.image {
+	.imageContainer {
 		display: none;
 	}
 
@@ -93,7 +179,7 @@ footer {
 	}
 
 	.navItem {
-		background-color: red;
+		background-color: #3498db;
 		width: 100%;
 		height: 150%;
 	}
@@ -101,10 +187,8 @@ footer {
 	#hamburger {
 		display: block;
 		height: 200%;
-		border-radius: 0 0 10px 10px;
 	}
 }
-
 
 @media only screen and (max-width: 640px) {
 
@@ -117,7 +201,7 @@ footer {
 /* ==================== BEJELENTŐ FORM ==================== */
 
 
-form {
+#issueForm {
 	width: 100%;
 	text-align: center;
 	height: 100%;
@@ -136,11 +220,10 @@ form {
 #selectContainer {
 	display: flex;
 	flex-wrap: wrap;
-	width: calc(100% - 20px);
-	height: 25%;
+	width: 100%;
+	height: 15%;
 	justify-content: center;
-	margin: auto;
-	padding-top: 10px;
+	margin: 0;
 }
 
 .selectItem {
@@ -150,18 +233,24 @@ form {
 .selectShell {
 	width: calc(100% / 3);
 	height: 50%;
-	background-color: DodgerBlue;
-	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75);
+	background-color: #2ecc71;
 	cursor: pointer;
+	transition: background-color 0.2s;
+	user-select: none;
 }
 
 .selectShell p {
 	height: 100%;
 	width: 100%;
+	transition: color 0.2s;
+}
+
+.selectShell p:hover {
+	color: #ecf0f1;
 }
 
 .selectShell:hover {
-	background-color: blue;
+	background-color: #27ae60;
 }
 
 .optionShell:before,
@@ -177,12 +266,14 @@ p:before {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-color: yellow;
-	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75);
+	background-color: #27ae60;
+	transition: background-color 0.2s, color 0.2s;
+	user-select: none;
 }
 
 .optionShell:hover {
-	background-color: orange;
+	background-color: #2ecc71;
+	color: #ecf0f1;
 }
 
 textarea {
@@ -190,9 +281,15 @@ textarea {
 	height: 30%;
 	border-radius: 20px;
 	resize: none;
-	border: 1px solid #d9d9d9;
+	border: 1px solid #2c3e50;
 	margin: 35px 0 15px 0;
 	padding: 10px;
+	background-color: rgba(52, 152, 219,0.2);
+	font-size: 20px;
+}
+
+textarea:focus {
+    outline: 0;
 }
 
 #ratings {
@@ -209,9 +306,9 @@ textarea {
 	height:35px;
 	width: 35px;
 	margin: 4px;
-	background-color: white;
+	background-color: rgba(52, 152, 219,0.2);
 	border-radius: 50%;
-	border: 1px solid #d9d9d9;
+	border: 1px solid #2c3e50;
 	transition: all 0.2s;
 }
 
@@ -228,12 +325,12 @@ textarea {
 
 .radioInputSpanBackground,
 .radioInputSpan:hover {
-	background-color: #854400;
-	border: 1px solid #854400;
+	background-color: #3498db;
+	border: 1px solid #3498db;
 }
 
 #ratingSign {
-	color: #854400;
+	color: #2c3e50;
 	font-size: 20px;
 	width: 100%;
 	margin: 0 0 35px 0;
@@ -243,13 +340,13 @@ textarea {
 	border: none;
 	text-decoration: none; 
 	cursor: pointer;
-	background-color: #666;
-	color: white;
+	background-color: #3498db;
+	color: #2c3e50;
 	width: 215px;
 	height: 37px;
 	margin-top: 5px;
 	border-radius: 50px;
-	transition: background-color 0.3s;
+	transition: background-color 0.2s, color 0.2s;
 	box-shadow: 0 9px #b9b9b9;
 	font-size: 16px;
 }
@@ -264,7 +361,8 @@ textarea {
 }
 
 #submitButton:hover {
-	background-color: #854400;
+	background-color: #2980b9;
+	color: #ecf0f1;
 }
 
 #submitButton:active {
@@ -274,26 +372,43 @@ textarea {
 
 @media only screen and (max-width: 820px) {
 
+	nav {
+		background-color: white;
+	}
+
 	body {
 		min-height: 550px;
 	}
 
 	#selectContainerOn {
 		display: block;
-		width: 80%;
-		height: 15%;
-		border-radius: 10px;
-		margin-top: 3vh;
+		width: 215px;
+		height: 37px;
+		margin-top: 40px;
 		padding: 0 10px;
-		background-color: blue;
+		background-color: #3498db;
+		box-shadow: 0 9px #b9b9b9;
+		border-radius: 50px;
+		user-select: none;
+	}
+
+	#selectContainerOn:hover {
+		background-color: #2980b9;
+		color: #ecf0f1;
+	}
+
+	#selectContainerOn:active {
+		box-shadow: 0 5px #666;
+		transform: translateY(4px);
 	}
 
 	#selectContainerOff {
 		display: block;
 		width: 100%;
 		height: 80px;
-		background-color: DodgerBlue;
+		background-color: #2ecc71;
 		border-radius: 0 0 10px 10px;
+		user-select: none;
 	}
 
 	#selectContainerOff:before {
@@ -317,9 +432,6 @@ textarea {
 		width: 100%;
 		height: calc(100% / 6);
 	}
-}
-
-@media only screen and (max-width: 820px) {
 
 	#submitButtonShell,
 	#ratings {
@@ -328,12 +440,21 @@ textarea {
 
 	#ratingSign {
 		margin-bottom: 0;
+		font-size: 16px;
 	}
 
 	textarea {
 		margin: 0;
+		font-size: 16px;
 	}
 
+}
+
+@media only screen and (max-width: 639px) {
+
+	#selectContainerOn {
+		margin-top: 30px;
+	}
 }
 
 @media only screen and (max-width: 580px) {
@@ -345,25 +466,67 @@ textarea {
 
 /* ==================== BEJELENTÉSEK ==================== */
 
-#issueContainer {
+#filterContainer {
 	width: 100%;
-	height: 100%;
-	background-color: red;
+	height: 20%;
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+#filter {
+	margin: auto 20px;
+	border: none;
+	text-decoration: none; 
+	cursor: pointer;
+	background-color: #3498db;
+	color: #2c3e50;
+	width: 215px;
+	height: 37px;
+	border-radius: 50px;
+	transition: background-color 0.2s, color 0.2s;
+	box-shadow: 0 9px #b9b9b9;
+	font-size: 16px;
+	text-align: center;
+	user-select: none;
+}
+
+#filter:before {
+	height: 100%;
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#issueContainer {
+	border-top: 1px solid #2c3e50; 
+	width: 100%;
+	height: calc(80% - 1px);
 	justify-content: center;
+	overflow-y: scroll;
 }
 
 .issue {
-	width: 50%;
-	height: 60px;
+	margin: 8px auto 0 auto;
+	border-radius: 20px;
+	width: 80%;
+	height: 90px;
 	background-color: yellow;
 	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75);
 	cursor: pointer;
+	transition: transform 0.2s;
+	user-select: none;
 }
 
-.issue:before {
+.issue:hover {
+	transform: translateX(8px);
+}
+
+.issue h3 {
+	height: 100%;
+}
+
+.issue h3:before {
+	height: 100%;
 	content: "";
 	display: inline-block;
 	vertical-align: middle;
@@ -371,11 +534,143 @@ textarea {
 
 #issuePanel {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 90%;
-	height: 90%;
-	margin: 2.5%;
-	background-color: white;
-	display: none;
+	width: calc(100% - 40px);
+	max-width: 1460px;
+	height: 80%;
+	padding: 20px;
+	background-color: DodgerBlue;
+	top: -100%;
+	z-index: 10000002;
+	border-radius: 0 0 10px 10px;
+}
+
+#issueData {
+	overflow-y: scroll;
+	height: calc(100% - 50px);
+	width: 100%;
+}
+
+#issueData::-webkit-scrollbar,
+#issueContainer::-webkit-scrollbar { 
+    display: none; 
+}
+
+#issueData h3 {
+	margin-top: 8px;
+}
+
+#closeIssuePanel {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	background-color: DodgerBlue;
+}
+
+#closeIssuePanel:before {
+	height: 100%;
+	content: "";
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+#issueData h4 {
+	font-weight: 500;
+}
+
+#issueData h3 {
+	margin-bottom: 15px;
+	text-align: justify;
+}
+
+@media only screen and (min-width: 820px) {
+
+	#filter:hover {
+		background-color: #2980b9;
+		color: #ecf0f1;
+	}
+}
+
+@media only screen and (max-width: 820px) {
+
+	.issue {
+		height: 60px;
+		font-size: 14px;
+	}
+}
+
+
+/* ==================== JELSZÓ MÓDOSÍTÁS ==================== */
+
+#notSoPrettyDiv {
+	width: 100%;
+	height: 25%;
+}
+
+#passwordForm {
+	width: 50%;
+	height: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+}
+
+.input {
+	height: 25px;
+	padding: 5px;
+	margin: auto;
+	border-radius: 10px;
+	width: 100%;
+	border: 1px solid #2c3e50;
+	background-color: rgba(52, 152, 219,0.2);
+	font-size: 18px;
+}
+
+input:focus{
+    outline: 0;
+}
+
+.submit {
+	border: none;
+	text-decoration: none; 
+	cursor: pointer;
+	background-color: #3498db;
+	color: #2c3e50;
+	width: 215px;
+	height: 37px;
+	margin-top: 5px;
+	border-radius: 50px;
+	transition: background-color 0.2s, color 0.2s;
+	box-shadow: 0 9px #b9b9b9;
+	font-size: 16px;
+	margin-top: 40px;
+}
+
+.submit:hover {
+	background-color: #2980b9;
+	color: #ecf0f1;
+}
+
+.submit:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+@media only screen and (max-width: 820px) {
+
+	#notSoPrettyDiv {
+		height: 15%;
+	}
+
+	#passwordForm {
+		height: 70%;
+		width: 80%;
+	}
+
+	.input {
+		font-size: 16px;
+	}
 }
