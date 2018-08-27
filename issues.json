@@ -5,91 +5,91 @@
 	  	"Státusz" : "Bejelentve",
 	  	"Bejelentve" : "2018.05.01. 10:12",
 	  	"Várható_Kezdés" : "2018.05.02. 10:12",
-	  	"Objektum" : "ROS03",
-	  	"Ingatlan" : "Kis utca 4.",
+	  	"Objektum" : "AAA03",
+	  	"Ingatlan" : "Kis utca 1.",
 	  	"Szakterület" : "Kertészet",
 	  	"Típus" : "Igénybejelentés",
 	  	"Besorolás" : "Normál",
 	  	"Sz_szint" : "Munkaidőben",
-	  	"issue" : "UPS helyiség aspirációs központ összevont hiba"
+	  	"issue" : "UPS hiba"
 	  	}, 
 	  	{
 	  	"id" : "002",
 	  	"Státusz" : "Munkafelvétel",
 	  	"Bejelentve" : "2018.05.01. 10:12",
 	  	"Várható_Kezdés" : "2018.05.01. 12:12",
-	  	"Objektum" : "ROS02",
-	  	"Ingatlan" : "Nagy utca 4.",
+	  	"Objektum" : "AAA02",
+	  	"Ingatlan" : "Nagy utca 1.",
 	  	"Szakterület" : "Üzemeltetés",
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "A 4.emeleten lévő jobb oldali személy lift ajtó karistoló hangot ad és valamilyen alkatrész ki áll belőle. Kérnénk a hiba mihamarabb kijavitását."
+	  	"issue" : "A 4. emeleten megállt a lift."
 	  	},
 	  	{
 	  	"id" : "003",
 	  	"Státusz" : "Jóváhagyásra",
 	  	"Bejelentve" : "2018.05.01. 10:12",
 	  	"Várható_Kezdés" : "2018.05.01. 12:12",
-	  	"Objektum" : "ROS02",
-	  	"Ingatlan" : "Nagy utca 4.",
+	  	"Objektum" : "AAA02",
+	  	"Ingatlan" : "Nagy utca 1.",
 	  	"Szakterület" : "Üzemeltetés",
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Kedves Üzemeltetés! Az éjszakai őrség jelezte, hogy a parkolóban lévő kandeláberekből 8 db nem világít, illetve kantin oldalában lévő plusz egy kislámpa! Kérni szeretném a javításukat!"
+	  	"issue" : "Eldugult a lefolyó"
 	  	},
 	  	{
 	  	"id" : "004",
 	  	"Státusz" : "Végrehajtásra",
 	  	"Bejelentve" : "2018.05.01. 10:12",
 	  	"Várható_Kezdés" : "2018.05.01. 12:12",
-	  	"Objektum" : "ROS02",
+	  	"Objektum" : "AAA02",
 	  	"Ingatlan" : "Nagy utca 4.",
 	  	"Szakterület" : "Üzemeltetés",
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Kedves üzemeltetés! Földszinti szerverszobában nem működik a klíma, ennek mihamarabbi javítását kérném! "
+	  	"issue" : "Nem működik a dugalj"
 	  	},
 	  	{
 	  	"id" : "005",
 	  	"Státusz" : "TeljesítésIgazolásra",
 	  	"Bejelentve" : "2018.05.01. 10:12",
 	  	"Várható_Kezdés" : "2018.05.01. 12:12",
-	  	"Objektum" : "ROS02",
+	  	"Objektum" : "AAA02",
 	  	"Ingatlan" : "Nagy utca 4.",
 	  	"Szakterület" : "Üzemeltetés",
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Az épületben az egyik fázis kiesése miatt részleges áramszünet volt."
+	  	"issue" : "Nincs áram"
 	  	},
 	  	{
 	  	"id" : "006",
 	  	"Státusz" : "Ellenőrzésre",
 	  	"Bejelentve" : "2018.05.01. 10:12",
 	  	"Várható_Kezdés" : "2018.05.01. 12:12",
-	  	"Objektum" : "ROS02",
+	  	"Objektum" : "AAA02",
 	  	"Ingatlan" : "Nagy utca 4.",
 	  	"Szakterület" : "Üzemeltetés",
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "Kedves Üzemeltetés! 3. emeleti lift előtérben lévő tűzgátló ajtó, nyitáskor meg akad a hidegburkolatban. "
+	  	"issue" : "Nincs gáz"
 	  	},
 	  	{
 	  	"id" : "007",
 	  	"Státusz" : "Lezárva",
 	  	"Bejelentve" : "2018.05.01. 10:12",
 	  	"Várható_Kezdés" : "2018.05.01. 12:12",
-	  	"Objektum" : "ROS02",
+	  	"Objektum" : "AAA02",
 	  	"Ingatlan" : "Nagy utca 4.",
 	  	"Szakterület" : "Üzemeltetés",
 	  	"Típus" : "Hibabejelentés",
 	  	"Besorolás" : "Havária",
 	  	"Sz_szint" : "Munkaidőn kívül",
-	  	"issue" : "A takarítási, karbantartási, gondnoki feladatok rendben ellátva. A személykapu beléptető rendszere nem működik, jeleztem a BFO-nak. Rendkívüli esemény nem történt."
+	  	"issue" : "Nincs meleg víz"
 	  	}
 	]
 }

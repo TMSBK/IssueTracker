@@ -259,6 +259,7 @@ function issueHelper() {
             issues[i].addEventListener('click', function() {
                 issuePanel.classList.add('transition');
                 issuePanel.setAttribute('style', 'top: 0');
+                issuePanel.classList.add('bg-color');
                 issueData.scrollTop = 0;
                 issueData.getElementsByTagName('h4')[0].innerHTML = 'Bejelentés száma:';
                 issueData.getElementsByTagName('h3')[0].innerHTML = datas.issues[i].id;
