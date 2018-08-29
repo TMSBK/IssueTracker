@@ -357,6 +357,7 @@ textarea {
 	padding: 10px;
 	background-color: rgba(52, 152, 219,0.2);
 	font-size: 20px;
+	color: black;
 }
 
 textarea:focus {
@@ -694,6 +695,7 @@ body::-webkit-scrollbar,
 	border: 1px solid #2c3e50;
 	background-color: rgba(52, 152, 219,0.2);
 	font-size: 18px;
+	color: black;
 }
 
 input:focus{
