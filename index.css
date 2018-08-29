@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
-	color: #2c3e50;
+	color: #ecf0f1;
 }
 
 html {
@@ -18,7 +18,6 @@ ul {
 
 body {
 	height: 100%;
-	min-height: 500px;
 	max-width: 1500px;
 	margin: auto;
 	background-color: white;
@@ -28,7 +27,7 @@ body {
 nav {
 	height: 15%;
 	z-index: 10000000;
-	background-color: #3498db;
+	background-color: rgb(20,125,220);
 }
 
 main {
@@ -38,7 +37,7 @@ main {
 footer {
 	height: 15%;
 	z-index: 10000000;
-	background-color: #2ecc71;
+	background-color: rgb(140,180,80);
 }
 
 .block {
@@ -95,30 +94,6 @@ footer {
 	flex-wrap: wrap;
 }
 
-#welcomeContainer {
-	background: linear-gradient(231deg, rgba(52, 152, 219, 0.6), #ffffff);
-	background-size: 400% 400%;
-	-webkit-animation: BackgroundAnimation 15s ease infinite;
-	-moz-animation: BackgroundAnimation 15s ease infinite;
-	animation: BackgroundAnimation 15s ease infinite;
-}
-
-@-webkit-keyframes BackgroundAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes BackgroundAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes BackgroundAnimation { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
 #FMlogo {
 	margin: auto;
 	max-height: 80%;
@@ -134,6 +109,8 @@ footer {
 
 .logo {
 	height: 60%;
+	max-height: 85px;
+	max-width: 85px;
 	margin: auto;
 	transition: transform 0.2s;
 	cursor: pointer;
@@ -161,8 +138,9 @@ footer {
 
 
 .navItem {
-	background-color: #3498db;
-	font-weight: 500;
+	background-color: rgb(20,125,220);
+	color: #ecf0f1;
+	font-weight: 600;
 }
 
 .navItem,
@@ -172,7 +150,7 @@ footer {
 	width: 20%;
 	min-width: 160px;
 	text-align: center;
-	transition: background-color 0.2s, color 0.2s;
+	transition: background-color 0.2s;
 	cursor: pointer;
 	user-select: none;
 }
@@ -182,12 +160,16 @@ footer {
 	justify-content: center;
 }
 
+a {
+	display: flex;
+}
+
 .navItem:before,
 .footerItem:before {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 #hamburger {
@@ -195,16 +177,16 @@ footer {
 	cursor: pointer;
 }
 
-.transition {
-	transition: all 0.5s;
+#hamburgerIcon {
+	margin: auto;
+	max-height: 45px;
+	max-width: 45px;
+	margin-right: 20px;
+	z-index: 1000000;
 }
 
-@media only screen and (min-width: 820px) {
-
-	.navItem:hover {
-		background-color: #2980b9;
-		color: #ecf0f1;
-	}
+.transition {
+	transition: all 0.5s;
 }
 
 @media only screen and (max-width: 820px) {
@@ -223,23 +205,34 @@ footer {
 		height: 50%;
 		position: absolute;
 		top: -225%;
-		background-color: #3498db;
 	}
 
 	.navItem {
-		background-color: #3498db;
 		width: 100%;
 		height: 150%;
-		margin-top: -1px;
+		margin-top: -2px;
 	}
 
 	.navItem:nth-child(4) {
-		height: calc(150% + 4px);
+		height: calc(150% + 8px);
 	}
 
 	#hamburger {
-		display: block;
+		display: flex;
 		height: 200%;
+	}
+
+	#hamburger h1 {
+		margin-left: 20px;
+		color: #ecf0f1;
+		font-size: 16px;
+	}
+
+	#hamburger h1:before {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
 	}
 }
 
@@ -247,6 +240,35 @@ footer {
 
 	.footerItem {
 		min-width: 80px;
+	}
+
+	.logo {
+		max-width: 45px;
+		max-height: 45px;
+	}
+}
+
+@media screen and (orientation: landscape) {
+  
+  	body {
+	    min-height: 500px;
+	  }
+
+  	.logo {
+		max-width: 45px;
+		max-height: 45px;
+	}
+}
+
+@media only screen and (min-width: 820px) {
+
+	.navItem:hover {
+		background-color: rgb(0,105,200);
+	}
+
+	.logo {
+		max-width: 85px;
+		max-height: 85px;
 	}
 }
 
@@ -286,7 +308,7 @@ footer {
 .selectShell {
 	width: calc(100% / 3);
 	height: 50%;
-	background-color: #2ecc71;
+	background-color: rgb(140,180,80);
 	cursor: pointer;
 	transition: background-color 0.2s;
 	user-select: none;
@@ -295,23 +317,19 @@ footer {
 .selectShell p {
 	height: 100%;
 	width: 100%;
-	transition: color 0.2s;
-}
-
-.selectShell p:hover {
 	color: #ecf0f1;
 }
 
 .selectShell:hover {
-	background-color: #27ae60;
+	background-color: rgb(120,160,60);
 }
 
 .optionShell:before,
 p:before {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+  	content: "";
+  	display: inline-block;
+  	height: 100%;
+  	vertical-align: middle;
 }
 
 
@@ -319,20 +337,20 @@ p:before {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-color: #27ae60;
-	transition: background-color 0.2s, color 0.2s;
+	background-color: rgb(140,180,80);
+	transition: background-color 0.2s;
 	user-select: none;
+	color: #ecf0f1;
 }
 
 .optionShell:hover {
-	background-color: #2ecc71;
-	color: #ecf0f1;
+	background-color: rgb(120,160,60);
 }
 
 textarea {
 	width: 80%;
 	height: 30%;
-	border-radius: 20px;
+	border-radius: 5px;
 	resize: none;
 	border: 1px solid #2c3e50;
 	margin: 35px 0 15px 0;
@@ -378,7 +396,7 @@ textarea:focus {
 
 .radioInputSpanBackground,
 .radioInputSpan:hover {
-	background-color: #3498db;
+	background-color: rgb(20,125,220);
 	border: 1px solid #3498db;
 }
 
@@ -393,16 +411,16 @@ textarea:focus {
 	border: none;
 	text-decoration: none; 
 	cursor: pointer;
-	background-color: #3498db;
-	color: #2c3e50;
+	background-color: rgb(20,125,220);
+	color: #ecf0f1;
 	width: 215px;
 	height: 37px;
 	margin-top: 5px;
-	border-radius: 50px;
+	border-radius: 2px;
 	transition: background-color 0.2s, color 0.2s;
-	box-shadow: 0 9px #b9b9b9;
+	box-shadow: 0 5px #b9b9b9;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 #submitButtonShell {
@@ -415,12 +433,11 @@ textarea:focus {
 }
 
 #submitButton:hover {
-	background-color: #2980b9;
-	color: #ecf0f1;
+	background-color: rgb(0,105,200);
 }
 
 #submitButton:active {
-	box-shadow: 0 5px #666;
+	box-shadow: 0 2px #666;
 	transform: translateY(4px);
 }
 
@@ -435,20 +452,18 @@ textarea:focus {
 		width: 215px;
 		height: 37px;
 		margin-top: 40px;
-		padding: 0 10px;
-		background-color: #3498db;
-		box-shadow: 0 9px #b9b9b9;
-		border-radius: 50px;
+		background-color: rgb(20,125,220);
+		box-shadow: 0 5px #b9b9b9;
+		border-radius: 2px;
 		user-select: none;
 	}
 
 	#selectContainerOn:hover {
-		background-color: #2980b9;
-		color: #ecf0f1;
+		background-color: rgb(0,105,200);
 	}
 
 	#selectContainerOn:active {
-		box-shadow: 0 5px #666;
+		box-shadow: 0 2px #666;
 		transform: translateY(4px);
 	}
 
@@ -456,7 +471,7 @@ textarea:focus {
 		display: block;
 		width: 100%;
 		height: 80px;
-		background-color: #2ecc71;
+		background-color: rgb(140,180,80);
 		border-radius: 0 0 10px 10px;
 		user-select: none;
 	}
@@ -472,7 +487,7 @@ textarea:focus {
 		position: absolute;
 		top: -100%;
 		z-index: 10000001;
-		background-color: #2ecc71;
+		background-color: rgb(140,180,80);
 		width: 100%;
 		height: 60%;
 		padding: 0;
@@ -497,7 +512,6 @@ textarea:focus {
 		margin: 0;
 		font-size: 16px;
 	}
-
 }
 
 @media only screen and (max-width: 639px) {
@@ -528,17 +542,17 @@ textarea:focus {
 	border: none;
 	text-decoration: none; 
 	cursor: pointer;
-	background-color: #3498db;
-	color: #2c3e50;
+	background-color: rgb(20,125,220);
+	color: #ecf0f1;
 	width: 215px;
 	height: 37px;
-	border-radius: 50px;
-	transition: background-color 0.2s, color 0.2s;
-	box-shadow: 0 9px #b9b9b9;
+	border-radius: 2px;
+	transition: background-color 0.2s;
+	box-shadow: 0 5px #b9b9b9;
 	font-size: 16px;
 	text-align: center;
 	user-select: none;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 #filter:before {
@@ -558,7 +572,7 @@ textarea:focus {
 
 .issue {
 	margin: 8px auto 0 auto;
-	border-radius: 20px;
+	border-radius: 2px;
 	width: 80%;
 	height: 90px;
 	text-align: center;
@@ -589,7 +603,7 @@ textarea:focus {
 	max-width: 1460px;
 	height: calc(var(--vh, 1vh) * 100 - 40px);
 	padding: 20px;
-	background-color: DodgerBlue;
+	background-color: rgb(20,125,220);
 	top: -225%;
 	z-index: 10000002;
 }
@@ -618,7 +632,7 @@ body::-webkit-scrollbar,
 	height: 50px;
 	text-align: center;
 	cursor: pointer;
-	background-color: DodgerBlue;
+	background-color: rgb(20,125,220);
 }
 
 #closeIssuePanel:before {
@@ -640,7 +654,7 @@ body::-webkit-scrollbar,
 @media only screen and (min-width: 820px) {
 
 	#filter:hover {
-		background-color: #2980b9;
+		background-color: rgb(0,105,200);
 		color: #ecf0f1;
 	}
 }
@@ -650,6 +664,7 @@ body::-webkit-scrollbar,
 	.issue {
 		height: 60px;
 		font-size: 14px;
+		width: 95%;
 	}
 }
 
@@ -689,25 +704,25 @@ input:focus{
 	border: none;
 	text-decoration: none; 
 	cursor: pointer;
-	background-color: #3498db;
-	color: #2c3e50;
+	background-color: rgb(20,125,220);
+	color: #ecf0f1;
 	width: 215px;
 	height: 37px;
 	margin-top: 5px;
-	border-radius: 50px;
-	transition: background-color 0.2s, color 0.2s;
-	box-shadow: 0 9px #b9b9b9;
+	border-radius: 2px;
+	transition: background-color 0.2s;
+	box-shadow: 0 5px #b9b9b9;
 	font-size: 16px;
+	font-weight: 600;
 	margin-top: 40px;
 }
 
 .submit:hover {
-	background-color: #2980b9;
-	color: #ecf0f1;
+	background-color: rgb(0,105,200);
 }
 
 .submit:active {
-	box-shadow: 0 5px #666;
+	box-shadow: 0 2px #666;
 	transform: translateY(4px);
 }
 

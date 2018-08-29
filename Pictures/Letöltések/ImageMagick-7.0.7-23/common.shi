@@ -1,0 +1,22 @@
+# Test environment
+top_srcdir='/home/tmsbk/Letöltések/ImageMagick-7.0.7-23'
+top_builddir='/home/tmsbk/Letöltések/ImageMagick-7.0.7-23'
+
+set -a
+COMPARE="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities/magick compare"
+COMPOSITE="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities/magick composite"
+CONJURE="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities/magick conjure"
+CONVERT="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities/magick convert"
+DISPLAY="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities/magick display"
+IDENTIFY="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities/magick identify"
+MAGICK="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities/magick"
+MONTAGE="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities/magick montage"
+VALIDATE="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/tests/validate"
+DRAWTEST="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/tests/drawtest"
+WANDTEST="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/tests/wandtest"
+LD_LIBRARY_PATH="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/coders"
+MAGICK_CONFIGURE_PATH="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/config:/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/config"
+MAGICK_FILTER_MODULE_PATH="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/filters"
+PATH="/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/utilities:/home/tmsbk/Letöltések/ImageMagick-7.0.7-23/tests:${PATH}"
+set +a

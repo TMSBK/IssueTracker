@@ -183,7 +183,7 @@ function formHelper() {
         }
 
         let close = document.createElement('div');
-        close.innerHTML = 'VISSZA';
+        close.innerHTML = 'Vissza';
         close.setAttribute('id', 'selectContainerOff');
         close.addEventListener('click', function() {
             selectContainer.style.top = '-100%';
@@ -288,7 +288,7 @@ function issueHelper() {
 
 
         const closeIssuePanel = document.getElementById('closeIssuePanel');
-        closeIssuePanel.innerHTML = 'VISSZA';
+        closeIssuePanel.innerHTML = 'Vissza';
 
         closeIssuePanel.addEventListener('click', function() {
             issuePanel.setAttribute('style', 'top: -225%');
@@ -307,7 +307,7 @@ function issueHelper() {
         if(filterFlag === true) {
             for(let i = 0; i < createdIssues.length; i++) {
                 createdIssues[i].style.display = 'block';
-                filter.style.boxShadow = '0 9px #b9b9b9';
+                filter.style.boxShadow = '0 5px #b9b9b9';
                 filter.style.transform = 'translateY(0px)';
                 filter.innerHTML = 'Folyamatban';
             }
@@ -317,7 +317,7 @@ function issueHelper() {
             for(let i = 0; i < createdIssues.length; i++) {
                 if(createdIssues[i].classList.contains('finished')) {
                     createdIssues[i].style.display = 'none';
-                    filter.style.boxShadow = '0 5px #666';
+                    filter.style.boxShadow = '0 2px #666';
                     filter.style.transform = 'translateY(4px)';
                     filter.innerHTML = 'Összes';
                 }

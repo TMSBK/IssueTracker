@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+*:focus {
+    outline: 0;
+    outline: none;
+}
+
+#maincontent {
+    max-width: 2200px;
+    margin: auto;
+}
+
+body { 
+    background: url('Picz/bg.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+header {
+    height: 10%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: left;
+    align-items: center; 
+    position: relative;
+}
+
+.logo {
+    height: 100%;
+    margin: 0 2%;
+    cursor: pointer;
+}
+
+svg {
+    fill: white;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+svg:hover {
+    fill: red;
+}
+
+.login {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.autoplayMain {
+    height: 50%;
+    background-color: black;
+}
+
+#flexContainer {
+    height: 20%;
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.flexItem {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+li {
+    color: white;
+    list-style-type: none;
+    margin: 0 4%;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+
+li:hover {
+    color: rgba(255,0,0,1);
+}
+
+.under {
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    background-color: rgba(0,0,0,0.7);
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.upper img {
+    min-height: 100%;
+    width: 100%;
+}
+
+.upper {
+    position: relative;
+}
+
+.upper:hover > .under {
+    opacity:1;
+}
+
+.underButtonMain {
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    height: 20%;
+    border: 1px solid white;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.underButtonMain:hover,
+.underButtonSub:hover {
+    background-color: white;
+}
+
+.underButtonMain:hover > span,
+.underButtonSub:hover > span {
+    color: black;
+}
+
+.underButtonSub {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.moreMain {
+    top: 25%;
+}
+
+.shareMain {
+    top: 55%;
+}
+
+.moreSub {
+    top: 0;
+}
+
+.shareSub {
+    top: 50%;
+}
+
+span {
+    color: white;
+    font-size: 1vw;
+    transition: all 0.2s;
+}
+
+span:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#menuElements {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#infotab {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left:0;
+    bottom: -20%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.9);
+    transition: all 0.2s;
+    display: flex;
+    z-index: 999999999999;
+}
+
+#infotab span {
+    display: block;
+    margin: auto;
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+#infotab span:hover {
+    color:rgba(255,0,0,1);
+}
+
+footer:hover > #infotab {
+    bottom: 0;
+}
+
+#sign {
+    max-height: 80%;
+    max-width: 80%;
+    z-index: 1000;
+}
+
+@media screen and (max-width:1030px) {
+
+    header {
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 0 4%;
+    }
+
+    .login {
+        position: relative;
+        height: 50%;
+    }
+
+    .autoplayMain {
+        height: 35%;
+    }
+
+    #flexContainer {
+        height: 35%;
+    }
+
+    .flexItem {
+        width: 100%;
+        height: 50%;
+        max-height: 300px;
+    }
+
+    li {
+        margin: 0 1.5%;
+        padding: 2vh 1vw;
+        font-size: 4vw;
+    }
+
+    .under {
+        display: none;
+    }
+}
+
+@media screen and (orientation: portrait) {
+
+    span {
+        top: 35%;
+        font-size: 4vw;
+    }
+
+}
+
+@media screen and (max-height:500px) {
+
+    .logo {
+        height: 50%;
+    }
+
+    header {
+        height: 15%;
+    }
+
+    footer {
+        height: 15%;
+    }
+
+}
